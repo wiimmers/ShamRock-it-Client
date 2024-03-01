@@ -1,5 +1,5 @@
 #        ShamRock.it
-##       v2.1.3 - *Release binaries only*   
+##       v2.1.4 - *Release binaries only*   
 
 ##       Functionality:
 ShamRock.it is a simple application created with Rust, HTML, CSS, JavaScript, and the Tauri framework. It functions as 
