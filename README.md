@@ -6,7 +6,9 @@ ShamRock.it is a simple application created with Rust, HTML, CSS, JavaScript, an
 an IT and Maintenance ticketing suite, while also allowing users to backup user files for transfer to another system. 
 ShamRock.it has an additional binary for administrators that creates an encrypted 'assets' file for secure storage and 
 use of credentials. ShamRock-it-Secure-Assets is needed to create this file. The 'assets' file with the encrypted information
-is placed in the assets direcory under src-tauri and decrypted within ShamRock.it.
+is placed in the assets direcory under src-tauri and decrypted within ShamRock.it. Integrates with Tizen OS Samsung TV App:
+ShamRock-iTV, through the use of a Node.js web server hosted in a Docker container: ShamRock-iTV-Webhook, to display tickets
+on a Samsung TV.
 
 ###     Ticketing
 - Click the submit ticket button
