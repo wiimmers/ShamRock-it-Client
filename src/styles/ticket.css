@@ -1,0 +1,121 @@
+*{
+    font-family: 'Arial', monospace;
+}
+html{
+    color: #f0f0f0; 
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#2f2f2f,#0f0f0f); 
+    align-items: center;
+    display:flex;
+    text-align: center;
+}
+#back a{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+#back a:hover{
+    filter: brightness(70%); 
+}
+#back a:active{
+    filter: brightness(50%); 
+}
+#smalllogo{
+    position :absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+#loader{
+    display: none;
+    text-align: center;
+}
+#spinner{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.5s linear infinite;
+    -webkit-animation: spin 0.5s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+#sentMsg{
+    display: none;
+    text-align: center;
+    color: yellow;
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 5px;
+    margin: auto;
+  }
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: yellow;
+}
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: rgb(214, 214, 214);
+    border-radius: 10px;
+    text-align: center;
+}
+  
+#location,
+#name,
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+#submitBtn {
+    grid-column: span 2;
+    color: linear-gradient(#2f2f2f,#0f0f0f);
+    background: linear-gradient(#1eca63, #0D6931);
+    width: 30%;
+    height: 25px;
+    border-radius:10px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bolder;
+}
+#submitBtn:hover{
+    filter:brightness(70%);
+}
+#submitBtn:active{
+    filter:brightness(50%);
+}
+#back,
+#smalllogo,
+#title {
+    grid-column: span 2;
+}
+#title{
+    color:green;
+}
+input:autofill, input:autofill, input:autofill {
+  font-size: inherit !important;
+  color: black !important;
+  background-color: white !important;
+}

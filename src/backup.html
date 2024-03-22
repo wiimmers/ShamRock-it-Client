@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShamRocket</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <div id="menu">
+        <a onclick="openCloseMenu()" style="cursor: pointer;">Menu</a>
+        <div id="menuItems">
+            <div id="ticketorbackup"><a href="index.html">Submit Ticket</a></div>
+            <div id="ticketorbackup"><a href="status.html">Ticket Statuses</a></div>
+            <div id="help" style="position:absolute;bottom:5px;left:67px;"><a href="readme_backup.html">Help</a></div>
+        </div>
+    </div>
+        <div id="legal"><h6><a href="legal.html">© 2024 Legal Disclaimer</a></h6></div>
+        <img id="shamrock" src="./assets/shamrocket_icon_ref.webp">
+        <div id="logotxt">
+            <div id="ext">
+                <div id="it">.it</div>
+            </div>
+            <div id="shamrocktxt">
+                <div id="welcome">Sham</div>
+                <div id="rock">Rock</div>
+            </div>
+        </div>
+        <button id="startbutton">Backup Files</button>
+        <div class="msg" id="cancel">You cancelled file compression, click start to retry</div>
+        <div class="msg" id="copy">Copying Files</div>
+        <div class="msg" id="zip">Zipping Files</div>
+        <div class="msg" id="delete">Deleting Leftovers</div>
+        <div id="pContainer"><progress id="progressbar" value="0"></progress></div>
+
+    <script type="text/javascript" src="scripts/backup.js"></script>
+    <script type="text/javascript" src="scripts/update.js"></script>
+    <script type="text/javascript">
+        function openCloseMenu() {
+            let menuItems = document.getElementById('menuItems')
+            if (menuItems.style.display == 'none' || menuItems.style.display == '') {
+                menuItems.style.display = 'block'
+            } else {
+                menuItems.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLDIR">
+            <Component Id="RunOnStartup" Guid="*">
+                <RegistryKey 
+                    Root="HKLM"
+                    Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Run"
+                >
+
+                <RegistryValue
+                    Type="string"
+                    Name="ShamRock.it"
+                    Value="&quot;[INSTALLDIR]ShamRock-it.exe&quot;"
+                    Action="write"
+                />
+                </RegistryKey>
+            </Component>
+        </DirectoryRef>
+    </Fragment>
+</Wix>

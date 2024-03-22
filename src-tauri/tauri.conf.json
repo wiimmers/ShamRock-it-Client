@@ -1,0 +1,79 @@
+{
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "devPath": "../src",
+    "distDir": "../src",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "ShamRock-it",
+    "version": "2.1.10"
+  },
+  "tauri": {
+    "allowlist": { 
+      "dialog": {
+        "ask": true,
+        "confirm": true,
+        "message": true
+      },
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": "C:/tmp"
+      },
+      "fs": {
+        "scope": [
+          "$APPDATA/Local/ShamRock-it-db/tickets.db"
+        ]
+      }
+    },
+    "bundle": {
+      "windows": {
+        "wix": {
+          "fragmentPaths": ["./wix/fragment.wxs"],
+          "componentRefs": ["RunOnStartup"]
+        }
+      },
+      "active": true,
+      "targets": [
+        "msi", "updater"
+      ],
+      "identifier": "com.jakesweeney",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/256x256.png",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "resizable": true,
+        "title": "ShamRock.it",
+        "width": 800,
+        "height": 600,
+        "label": "main"
+      }      
+    ], 
+    "systemTray": {
+      "iconPath": "./icons/icon.png",
+      "iconAsTemplate": true
+    },
+    "updater": {
+      "windows": {
+        "installMode": "passive"
+      },
+      "active": true,
+      "endpoints": [
+        "https://gist.githubusercontent.com/wiimmers/bb90a0ea1ac2880395c0e74ced493fb7/raw"
+      ],
+      "dialog": true,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDNERDJDOTI0OUJFQjZCNzIKUldSeWErdWJKTW5TUFpBb3NrOE5nY1Nzbk1VYlpWajQwOGVHengvUUd2QnBPV3NnZkMwcVhkUW4K"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShamRocket</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+        <div id="menu">
+            <a onclick="openCloseMenu()" style="cursor: pointer;">Menu</a>
+            <div id="menuItems">
+                <div id="ticketorbackup"><a href="backup.html">Backup User Files</a></div>
+                <div id="ticketorbackup"><a href="status.html">Ticket Statuses</a></div>
+                <div id="help" style="position:absolute; bottom: 5px; left: 67px;"><a href="readme_ticket.html">Help</a></div>
+            </div>
+        </div>
+        <div id="legal"><h6><a href="legal.html">© 2024 Legal Disclaimer</a></h6></div>
+        <img id="shamrock" src="./assets/shamrocket_icon_ref.webp">
+        <div id="logotxt">
+            <div id="ext">
+                <div id="it">.it</div>
+            </div>
+            <div id="shamrocktxt">
+                <div id="welcome">Sham</div>
+                <div id="rock">Rock</div>
+            </div>
+        </div>
+        <a style="color:black;" href="ticket.html"><button id="submitbutton">Submit Ticket</button></a>
+        <div id="pContainer"><progress id="progressbar" value="0"></progress></div>
+
+    <script type="text/javascript" src="scripts/script.js"></script>
+    <script type="text/javascript">
+        function openCloseMenu() {
+            let menuItems = document.getElementById('menuItems')
+            if (menuItems.style.display == 'none' || menuItems.style.display == '') {
+                menuItems.style.display = 'block'
+            } else {
+                menuItems.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

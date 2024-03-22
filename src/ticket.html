@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ticket</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/ticket.css">
+    </head>
+    <body>
+        <div id="back"><a href="index.html">Back</a></div>
+        <div id="smalllogo"><img src="assets/32x32.webp" alt="shamrock-it"></div>
+        <h2 id="title">Submit Tickets</h2>
+        <form id="ticket_form" name="ticket_form" method="post" autocomplete="nope">
+            <div class="container">
+                <label for="ticket_type">Select your type of request *
+                    <select id="ticket_type" name="ticket_type">
+                        <option value="IT">IT</option>
+                        <option value="Maintenance">Maintenance</option>
+                    </select>
+                </label>
+                <div id="location">
+                    <label for="locale">Location: *
+                        <select id="locale" name="locale">
+                            <option value="Tri County">Tri-County</option>
+                            <option value="Western Hills">Western Hills</option>
+                            <option value="Florence, KY">Florence</option>
+                            <option value="Lebanon, OH">Lebanon</option>
+                        </select>
+                    </label>
+                    <label for="dealer">Store:
+                        <select id="dealer" name="dealer">
+                            <!-- Options will be populated dynamically using JavaScript -->
+                        </select>
+                    </label>
+                </div>
+                <div id="name">
+                    <label for="first_name">First Name *
+                        <input type="text" id="first_name" name="first_name" maxlength="50" placeholder="Jane" autocomplete="nope"  />
+                    </label>
+                    <label for="last_name">Last Name *
+                        <input type="text" id="last_name" name="last_name" maxlength="50" placeholder="Doe" autocomplete="nope" />
+                    </label>
+                </div>
+                <div id="contact">
+                    <label for="email">Email Address: *
+                        <input type="email" id="email" name="email" maxlength="80" placeholder="@jakesweeney.com" autocomplete="nope"/>
+                    </label>
+                    <label for="telephone">Extension:
+                        <input type="number" id="telephone" name="telephone" pattern="[0-9]{4}" maxlength="4" style="appearance:textfield;-webkit-appearance:none;-moz-appearance:textfield;" placeholder="4 digit extension" autocomplete="nope" />
+                    </label>
+                </div>
+                <label for="request_type">Request Type: *
+                    <select id="request_type" name="request_type">
+                        <option value="Desktop Support">Desktop Support</option>
+                        <option value="New Hire/Termination">New Hire/Termination</option>
+                        <option value="Add Campaign">Add Campaign</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="VinSolutions/Desking Tools">Vin Solutions/Desking Tools</option>
+                        <option value="CDK Changes/User Add">CDK Changes/Add User</option>
+                        <option value="Printer Support">Printer Support</option>
+                        <option value="Phone/Call Flow Changes">Phone/Call Flow Changes</option>
+                    </select>
+                </label>
+                <label for="request">Request: *
+                    <textarea id="request" name="request" maxlength="1000" cols="50" rows="6" placeholder="Insert Request"></textarea>
+                </label>
+                <button type="button" id="submitBtn" onclick="formatMessage()">Send Ticket</button>
+            </div>
+        </form>
+        <div id="loader">
+            <div id="spinner"></div>
+        </div>
+        <div id="sentMsg">Ticket Sent!</div> 
+        <script type="text/javascript" src="/scripts/ticket.js"></script>
+        <script type="text/javascript" src="scripts/update.js"></script>
+    </body>
+    </html> 

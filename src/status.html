@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>ShamRock-iTV</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/status.css"/>
+</head>
+
+<body>
+    <div id="menu">
+        <a onclick="openCloseMenu()" style="cursor: pointer;">Menu</a>
+        <div id="menuItems">
+            <div id="ticketorbackup"><a href="backup.html">Backup User Files</a></div>
+            <div id="ticketorbackup"><a href="index.html">Submit Ticket</a></div>
+            <div id="help" style="position:absolute; bottom: 5px; left: 67px;"><a href="readme_ticket.html">Help</a></div>
+        </div>
+    </div>
+ 	<div id="header">
+ 		<img id="shamrock" src="assets/shamrocket_icon_ref.webp" style="width:40px;">
+ 	</div>
+ 	
+ 	<div id="container">
+ 		<div id="heading">Tickets</div>
+		<div id="info" style="width: 100%;text-align: center;">
+			<span style="width: 70px;">Status</span>
+			<span style="width: 100px;">Ticket #</span>
+		</div>
+ 		<div id="list">
+ 			
+ 		</div>
+ 	</div>
+    <script type="text/javascript" src="./scripts/status.js"></script>
+    <script type="text/javascript">
+        function openCloseMenu() {
+            let menuItems = document.getElementById('menuItems')
+            if (menuItems.style.display == 'none' || menuItems.style.display == '') {
+                menuItems.style.display = 'block'
+            } else {
+                menuItems.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0 auto; font-family: 'Arial', monospace;
+}
+html{
+    display: flex; 
+    align-items: center;
+    color: #f0f0f0; 
+	background: linear-gradient(#2f2f2f,#0f0f0f); 
+	height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+    flex-direction:row;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+	text-align: center; 
+	color: black; 
+	font-size: 30px;
+	margin: 5px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+#menu {
+    margin: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+}
+#menu a:hover{
+    filter: brightness(70%);
+}
+#menu a:active{
+    filter: brightness(50%); 
+}
+#menuItems  {
+    text-align: center;
+    margin-top: 10px;
+    border: solid black 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(160,159,159,0.4), rgba(160,159,159,0.2)); 
+    backdrop-filter: blur(2px);
+    position: relative;
+    height: 400px;
+    display: none;
+    flex-direction: column;
+}
+#menuItems div{
+    padding: 10px;
+    font-style:italic;
+}
+#menuItems a{
+    padding: 10px;
+    border-bottom: solid black 0.1px;
+    color: black;
+}
+#shamrock{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+#shamrockitv{
+	position: absolute;
+	top: 50px; 
+	right: 20px;
+	font-size: 40px;
+	color: yellow; 
+	font-style: italic;
+}
+#container{
+	padding: 10px;
+	background-color: #999999; 
+	border-radius: 10px;
+	min-height: 480px;
+	height: auto;
+	width: 700px;
+	display: flex;
+	flex-direction: column;
+    margin: 50px auto;
+}
+#heading{
+	text-align:center;
+	padding-top: 20px;
+	font-size: 30px;
+	color: yellow;
+	font-weight:bold;
+	background: linear-gradient(#2f2f2f,#0f0f0f); 
+	border-radius: 10px;
+	height: 50px;
+	width: 100%;
+}
+#info{
+	display: flex;
+	color: black; 
+	font-size: 25px;
+	font-weight: bolder;
+}
+#list{
+	background-color: white;
+	min-height: 400px;
+	width: 100%;
+	border-radius: 10px;
+	padding-top: 10px;
+}
